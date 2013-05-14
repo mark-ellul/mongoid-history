@@ -13,7 +13,7 @@ module Mongoid::History
       field       :version,                 :type => Integer
       field       :action,                  :type => String
       field       :scope,                   :type => String
-      belongs_to  :modifier,                :class_name => Mongoid::History.modifier_class_name
+      field  :modifier,                :type => Integer
 
       index(:scope => 1)
       index(:association_chain => 1)
